@@ -26,6 +26,7 @@ public class MainActivity extends AppCompatActivity {
         textViewStudent = findViewById(R.id.tvOut);
         btnWhoAmI = findViewById(R.id.btnWhoAmI);
         btnItIsNotMe = findViewById(R.id.btnItIsNotMe);
+        checkBox = findViewById(R.id.checkBox);
 
         View.OnClickListener oclBtnWhoAmI = new View.OnClickListener() {
             @Override
