@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".nav_data">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical" >
+
+            <ImageView
+                android:id="@+id/imageView2"
+                android:layout_width="wrap_content"
+                android:layout_height="147dp"
+                android:layout_margin="20px"
+                android:background="@android:drawable/dialog_holo_light_frame"
+                android:elevation="10px"
+                android:padding="6px"
+                android:paddingStart="6px"
+                android:paddingLeft="6px"
+                android:paddingTop="6px"
+                android:paddingEnd="6px"
+                android:paddingRight="6px"
+                android:paddingBottom="6px"
+                android:src="@drawable/animation" />
+
+            <TextView
+                android:id="@+id/textView2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginLeft="40px"
+                android:layout_marginTop="10px"
+                android:layout_marginRight="40px"
+                android:layout_marginBottom="40px"
+                android:fontFamily="serif"
+                android:lineSpacingExtra="8sp"
+                android:padding="10px"
+                android:text="       Анимацией называется вид искусства, который создается из последовательности кадров, сменяющих друг друга с определенной частотой (обычно она колеблется от 12 до 30 кадров в секунду) и создающих иллюзию движения. В наши дни анимация распространена повсеместно: в фильмах, играх, социальных сетях, рекламе и на телевидении. Анимация зародилась еще в первобытную эру задолго до появления современных изобретений, таких как фотоаппарат или видеокамера. Первыми примерами анимации можно считать палеолитические пещерные рисунки животных, на которых они изображались со множеством ног, перекрывающих друг друга. Таким образом древние люди пытались запечатлеть движение.  "
+                android:textAlignment="gravity"
+                android:textColor="#2E2E2E"
+                android:textSize="18sp"
+                android:typeface="monospace" />
+
+            <TextView
+                android:id="@+id/textView3"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="40px"
+                android:layout_marginTop="15px"
+                android:layout_marginRight="40px"
+                android:layout_marginBottom="15px"
+                android:fontFamily="monospace"
+                android:text="Рожицына, Ю. П. История анимации / Ю. П. Рожицына. — Текст : непосредственный // Молодой ученый. — 2022. — № 25 (420). — С. 424-428. "
+                android:textAlignment="textEnd"
+                android:textColor="#8348B8" />
+
+        </LinearLayout>
+    </ScrollView>
+</FrameLayout>
