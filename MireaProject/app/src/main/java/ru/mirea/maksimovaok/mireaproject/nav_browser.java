@@ -1,12 +1,16 @@
 package ru.mirea.maksimovaok.mireaproject;
 
+import android.os.Build;
 import android.os.Bundle;
 
+import androidx.annotation.NonNull;
 import androidx.fragment.app.Fragment;
 
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.webkit.WebSettings;
+import android.webkit.WebView;
 
 /**
  * A simple {@link Fragment} subclass.
@@ -60,5 +64,17 @@ public class nav_browser extends Fragment {
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
         return inflater.inflate(R.layout.fragment_nav_browser, container, false);
+    }
+
+    @Override
+    public void onViewCreated(@NonNull View view, Bundle savedInstanceState) {
+        super.onViewCreated(view, savedInstanceState);
+
+
+        WebView webView = view.findViewById(R.id.webView);
+        if (Build.VERSION.SDK_INT >= 19) {
+            webView.getSettings().setCacheMode(WebSettings.LOAD_CACHE_ELSE_NETWORK);
+        }
+        webView.loadUrl("https://www.google.com/");
     }
 }
