@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">data_thread</string>
+    <string name="text"> Activity.RunOnUiThread - выполняет указанное действие сразу, если текущий поток - поток ui,
+        если нет - ставит действие в очередь потока событий ui. \n
+        post - отправляет Runnable  в виде сообщения в основной поток. \n
+        postDelayed - отправляет Runnable в виде сообщения в основной поток через промежуток времени, указанный в милисекундах. </string>
+</resources>
