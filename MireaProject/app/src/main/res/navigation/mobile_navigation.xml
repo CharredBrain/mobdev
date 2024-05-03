@@ -37,4 +37,19 @@
         android:name="ru.mirea.maksimovaok.mireaproject.nav_worker"
         android:label="fragment_nav_worker"
         tools:layout="@layout/fragment_nav_worker" />
+    <fragment
+        android:id="@+id/compass"
+        android:name="ru.mirea.maksimovaok.mireaproject.Compass"
+        android:label="Compass"
+        tools:layout="@layout/fragment_compass" />
+    <fragment
+        android:id="@+id/microphragment"
+        android:name="ru.mirea.maksimovaok.mireaproject.microphragment"
+        android:label="Microphone Activity"
+        tools:layout="@layout/fragment_microphragment" />
+    <fragment
+        android:id="@+id/camera"
+        android:name="ru.mirea.maksimovaok.mireaproject.Camera"
+        android:label="Camera"
+        tools:layout="@layout/fragment_camera" />
 </navigation>
