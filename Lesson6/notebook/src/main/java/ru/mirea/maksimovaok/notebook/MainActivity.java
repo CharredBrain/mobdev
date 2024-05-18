@@ -45,18 +45,6 @@ public class MainActivity extends AppCompatActivity {
         }
     }
 
-    @Override
-    public void onRequestPermissionsResult(int requestCode, @NonNull String[] permissions, @NonNull int[] grantResults) {
-        super.onRequestPermissionsResult(requestCode, permissions, grantResults);
-        if (requestCode == REQUEST_CODE_PERMISSION) {
-            if (grantResults.length > 0 && grantResults[0] == PackageManager.PERMISSION_GRANTED) {
-                Toast.makeText(this, "Разрешение на запись во внешнее хранилище предоставлено", Toast.LENGTH_SHORT).show();
-            } else {
-                Toast.makeText(this, "Необходимо разрешение на запись во внешнее хранилище", Toast.LENGTH_SHORT).show();
-            }
-        }
-    }
-
     public void writeFileToExternalStorage(View view) {
         File path = Environment.getExternalStoragePublicDirectory(Environment.DIRECTORY_DOCUMENTS);
         File file = new File(path, fileName.getText().toString());
