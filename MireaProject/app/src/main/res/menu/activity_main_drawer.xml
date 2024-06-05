@@ -6,10 +6,6 @@
 
     <group android:checkableBehavior="single">
         <item
-            android:id="@+id/nav_worker"
-            android:icon="@android:drawable/ic_popup_sync"
-            android:title="Worker" />
-        <item
             android:id="@+id/nav_home"
             android:icon="@android:drawable/ic_lock_power_off"
             android:title="@string/menu_home" />
@@ -42,6 +38,27 @@
             android:id="@+id/microphragment"
             android:icon="@android:drawable/presence_audio_online"
             android:title="Voice Activity" />
+        <item
+            android:id="@+id/nav_worker"
+            android:icon="@android:drawable/ic_popup_sync"
+            android:title="Worker" />
+        <item
+            android:id="@+id/profile"
+            android:icon="@android:drawable/ic_menu_manage"
+            android:iconTint="#070707"
+            android:title="Profile" />
+        <item
+            android:id="@+id/firebase"
+            android:icon="@android:drawable/ic_dialog_dialer"
+            android:title="Firebase" />
+        <item
+            android:id="@+id/maps"
+            android:icon="@android:drawable/ic_menu_compass"
+            android:title="Maps" />
+        <item
+            android:id="@+id/fileInteraction"
+            android:icon="@android:drawable/ic_input_get"
+            android:title="File Interaction" />
 
     </group>
 </menu>

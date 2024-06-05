@@ -52,4 +52,24 @@
         android:name="ru.mirea.maksimovaok.mireaproject.Camera"
         android:label="Camera"
         tools:layout="@layout/fragment_camera" />
+    <fragment
+        android:id="@+id/profile"
+        android:name="ru.mirea.maksimovaok.mireaproject.Profile"
+        android:label="fragment_profile"
+        tools:layout="@layout/fragment_profile" />
+    <fragment
+        android:id="@+id/firebase"
+        android:name="ru.mirea.maksimovaok.mireaproject.Firebase"
+        android:label="fragment_firebase"
+        tools:layout="@layout/fragment_firebase" />
+    <fragment
+        android:id="@+id/maps"
+        android:name="ru.mirea.maksimovaok.mireaproject.Maps"
+        android:label="fragment_maps"
+        tools:layout="@layout/fragment_maps" />
+    <fragment
+        android:id="@+id/fileInteraction"
+        android:name="ru.mirea.maksimovaok.mireaproject.FileInteraction"
+        android:label="fragment_file_interaction"
+        tools:layout="@layout/fragment_file_interaction" />
 </navigation>
