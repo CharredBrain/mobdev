@@ -14,6 +14,11 @@
             android:icon="@drawable/ic_menu_gallery"
             android:title="@string/menu_gallery" />
         <item
+            android:id="@+id/profile"
+            android:icon="@android:drawable/ic_menu_manage"
+            android:iconTint="#070707"
+            android:title="Profile" />
+        <item
             android:id="@+id/nav_slideshow"
             android:icon="@drawable/ic_menu_slideshow"
             android:title="@string/menu_slideshow" />
@@ -42,15 +47,6 @@
             android:id="@+id/nav_worker"
             android:icon="@android:drawable/ic_popup_sync"
             android:title="Worker" />
-        <item
-            android:id="@+id/profile"
-            android:icon="@android:drawable/ic_menu_manage"
-            android:iconTint="#070707"
-            android:title="Profile" />
-        <item
-            android:id="@+id/firebase"
-            android:icon="@android:drawable/ic_dialog_dialer"
-            android:title="Firebase" />
         <item
             android:id="@+id/maps"
             android:icon="@android:drawable/ic_menu_compass"

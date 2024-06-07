@@ -58,11 +58,6 @@
         android:label="fragment_profile"
         tools:layout="@layout/fragment_profile" />
     <fragment
-        android:id="@+id/firebase"
-        android:name="ru.mirea.maksimovaok.mireaproject.Firebase"
-        android:label="fragment_firebase"
-        tools:layout="@layout/fragment_firebase" />
-    <fragment
         android:id="@+id/maps"
         android:name="ru.mirea.maksimovaok.mireaproject.Maps"
         android:label="fragment_maps"
