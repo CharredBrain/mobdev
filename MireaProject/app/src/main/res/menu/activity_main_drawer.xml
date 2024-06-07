@@ -59,6 +59,10 @@
             android:id="@+id/fileInteraction"
             android:icon="@android:drawable/ic_input_get"
             android:title="File Interaction" />
+        <item
+            android:id="@+id/weather"
+            android:icon="@android:drawable/ic_menu_view"
+            android:title="Weather Forecast" />
 
     </group>
 </menu>
