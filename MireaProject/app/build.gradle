@@ -1,6 +1,7 @@
 plugins {
     alias(libs.plugins.androidApplication)
     id 'com.google.gms.google-services'
+    alias(libs.plugins.googleAndroidLibrariesMapsplatformSecretsGradlePlugin)
 }
 
 android {
@@ -43,10 +44,13 @@ dependencies {
     implementation libs.navigation.ui
     implementation libs.firebase.auth
     implementation libs.activity
+    implementation libs.play.services.maps
     testImplementation libs.junit
     androidTestImplementation libs.ext.junit
     androidTestImplementation libs.espresso.core
     implementation	'androidx.work:work-runtime:2.8.1'
     implementation 'org.osmdroid:osmdroid-android:6.1.16'
     implementation "androidx.preference:preference:1.2.0"
+    implementation 'com.yandex.android:maps.mobile:4.3.1-full'
+
 }

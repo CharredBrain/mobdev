@@ -1,10 +1,10 @@
 package ru.mirea.maksimovaok.mireaproject;
 
 import android.content.Context;
+import android.content.pm.PackageManager;
 import android.os.Bundle;
 
-import androidx.annotation.NonNull;
-import androidx.annotation.Nullable;
+import androidx.core.content.ContextCompat;
 import androidx.core.content.res.ResourcesCompat;
 import androidx.fragment.app.Fragment;
 import androidx.preference.PreferenceManager;
@@ -26,6 +26,10 @@ import org.osmdroid.views.overlay.compass.InternalCompassOrientationProvider;
 import org.osmdroid.views.overlay.mylocation.GpsMyLocationProvider;
 import org.osmdroid.views.overlay.mylocation.MyLocationNewOverlay;
 
+import java.util.Arrays;
+
+import android.Manifest;
+
 import ru.mirea.maksimovaok.mireaproject.databinding.FragmentMapsBinding;
 
 public class Maps extends Fragment {
@@ -35,6 +39,9 @@ public class Maps extends Fragment {
 
     private String mParam1;
     private String mParam2;
+
+    private boolean isWork = false;
+    private final int REQUEST_PERMISSION_CODE = 204;
 
 
     public Maps() {
@@ -61,7 +68,20 @@ public class Maps extends Fragment {
 
         mapView = binding.mapView;
 
+        String[] permissions = {
+                android.Manifest.permission.ACCESS_COARSE_LOCATION
+                , Manifest.permission.ACCESS_FINE_LOCATION
+        };
 
+        if (
+                Arrays.stream(permissions)
+                        .map(elem -> ContextCompat.checkSelfPermission(getContext(), elem))
+                        .allMatch(elem -> elem == PackageManager.PERMISSION_GRANTED)
+        ) {
+            isWork = true;
+        } else {
+            requestPermissions(permissions, REQUEST_PERMISSION_CODE);
+        }
 
         mapView.setZoomRounding(true);
         mapView.setMultiTouchControls(true);
@@ -89,7 +109,7 @@ public class Maps extends Fragment {
         marker1.setOnMarkerClickListener(new Marker.OnMarkerClickListener() {
             public boolean onMarkerClick(Marker marker, MapView mapView) {
                 Toast.makeText(getContext(),"Here's where I'll be this summer",
-                        Toast.LENGTH_SHORT).show();
+                        Toast.LENGTH_LONG).show();
                 return true;
             }
         });
@@ -102,7 +122,7 @@ public class Maps extends Fragment {
         marker2.setOnMarkerClickListener(new Marker.OnMarkerClickListener() {
             public boolean onMarkerClick(Marker marker, MapView mapView) {
                 Toast.makeText(getContext(),"Here's where I want to go",
-                        Toast.LENGTH_SHORT).show();
+                        Toast.LENGTH_LONG).show();
                 return true;
             }
         });
@@ -115,13 +135,19 @@ public class Maps extends Fragment {
         marker3.setOnMarkerClickListener(new Marker.OnMarkerClickListener() {
             public boolean onMarkerClick(Marker marker, MapView mapView) {
                 Toast.makeText(getContext(),"Kurva bober!",
-                        Toast.LENGTH_SHORT).show();
+                        Toast.LENGTH_LONG).show();
                 return true;
             }
         });
         mapView.getOverlays().add(marker3);
         marker3.setIcon(ResourcesCompat.getDrawable(getResources(), org.osmdroid.library.R.drawable.osm_ic_follow_me_on, null));
         marker3.setTitle("Kurva");
+
+        binding.handshake.setOnClickListener(v -> {
+            mapController.setZoom(20.0);
+            GeoPoint startPoint1 = new GeoPoint(new GeoPoint(55.794302, 37.701582));
+            mapController.setCenter(startPoint1);
+        });
 
         return binding.getRoot();
     }
@@ -145,4 +171,5 @@ public class Maps extends Fragment {
             mapView.onPause();
         }
     }
+
 }

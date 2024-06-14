@@ -35,7 +35,7 @@
     <fragment
         android:id="@+id/nav_worker"
         android:name="ru.mirea.maksimovaok.mireaproject.nav_worker"
-        android:label="fragment_nav_worker"
+        android:label="Worker"
         tools:layout="@layout/fragment_nav_worker" />
     <fragment
         android:id="@+id/compass"
@@ -55,21 +55,21 @@
     <fragment
         android:id="@+id/profile"
         android:name="ru.mirea.maksimovaok.mireaproject.Profile"
-        android:label="fragment_profile"
+        android:label="Profile"
         tools:layout="@layout/fragment_profile" />
     <fragment
         android:id="@+id/maps"
         android:name="ru.mirea.maksimovaok.mireaproject.Maps"
-        android:label="fragment_maps"
+        android:label="Maps"
         tools:layout="@layout/fragment_maps" />
     <fragment
         android:id="@+id/fileInteraction"
         android:name="ru.mirea.maksimovaok.mireaproject.FileInteraction"
-        android:label="fragment_file_interaction"
+        android:label="File Interaction"
         tools:layout="@layout/fragment_file_interaction" />
     <fragment
         android:id="@+id/weather"
         android:name="ru.mirea.maksimovaok.mireaproject.Weather"
-        android:label="fragment_weather"
+        android:label="Weather"
         tools:layout="@layout/fragment_weather" />
 </navigation>
